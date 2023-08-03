@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Dice_Game_2021_1691085500619-push-trigger-input-set
+  identifier: Build_Dice_Game_2021_1691085500619pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Dice_Game_2021_1691085500619
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
