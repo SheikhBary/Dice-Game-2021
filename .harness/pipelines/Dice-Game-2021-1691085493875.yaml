@@ -1,0 +1,33 @@
+pipeline:
+  name: Build Dice-Game-2021
+  identifier: Build_Dice_Game_2021_1691085500619
+  projectIdentifier: default_project
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesHosted
+            spec:
+              identifier: k8s-hosted-infra
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    connectorRef: account.harnessImage
+                    image: alpine
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.Github_OAuth_1691085483670
+        repoName: SheikhBary/Dice-Game-2021
+        build: <+input>
