@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_Dice_Game_2021_1691085500619-pr-trigger-input-set
+  identifier: Build_Dice_Game_2021_1691085500619prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_Dice_Game_2021_1691085500619
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
